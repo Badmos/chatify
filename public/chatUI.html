@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat UI | Chatify</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="chat">
+    <div class="chat_leftnav">
+        <h3>Members</h3>
+        <div id="users"></div>
+    </div>
+    <div class="chat__body">
+        <ol id="messages" class="chat__messages"></ol>
+
+        <div class="chat__bottom">
+            <form id="message-form">
+                <input type="text" name="input-field" placeholder="Leave a message" autofocus autocomplete="off" />
+                <button>Submit</button>
+
+            </form>
+            <button id="send-location">Get location</button>
+        </div>
+    </div>
+    <script id="message-template" type="text/template">
+        <li class="message">
+            <div class="message__title">
+                <h4>
+                    {{from}}
+                </h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                {{content}}
+            </div>
+        </li>
+    </script>
+
+    <script id="location-template" type="text/template">
+        <li class="message">
+            <div class="message__title">
+                <h4>
+                    {{from}}
+                </h4>
+                <span>{{createdAt}}</span>
+            </div>
+            <div class="message__body">
+                <p>
+                    <a href="{{url}}" target="_blank"> Hey guys, Checkout my present location </a>
+                </p>
+            </div>
+        </li>
+    </script>
+
+
+
+    <script src=" /js/libs/jquery-3.3.1.min.js "></script>
+    <script src="/js/libs/mustache.min.js "></script>
+    <script src="/socket.io/socket.io.js "></script>
+    <script src="/js/libs/moment.js "></script>
+    <script src="/js/index.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "chatify",
+    "version": "1.0.0",
+    "description": "real time chat app",
+    "main": "chat.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon chat"
+    },
+    "author": "Yusuf Badmos",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "moment": "^2.22.2",
+        "serve-favicon": "^2.5.0",
+        "socketio": "^1.0.0"
+    }
+}
