@@ -1,46 +1,21 @@
-const express = require("express");
-const favicon = require("serve-favicon");
-const app = express();
-const http = require("http");
-const server = http.Server(app);
-const socketIO = require("socket.io");
-const path = require("path");
-const moment = require("moment")();
-const port = process.env.PORT || 5000;
+const express = require("express"),
+    favicon = require("serve-favicon"),
+    app = express(),
+    http = require("http"),
+    server = http.Server(app),
+    socketIO = require("socket.io"),
+    path = require("path"),
+    port = process.env.PORT || 5000,
+    { User } = require('./helpers/helpers'),
+    { isValidString } = require('./helpers/helpers'),
+    { dataHandler } = require('./helpers/helpers'),
+    { locationHandler } = require('./helpers/helpers');
 
 app.use(express.static(path.join(__dirname, "/public"))); //serve static page
 app.use(favicon(path.join(__dirname, "/public", "/images", "/favicon.ico"))); //Serve favicon
 
 let io = socketIO(server) //connect app
 
-// create individual users
-class User {
-    constructor() {
-        this.userList = [];
-    }
-    addUser(id, name, room) {
-        let user = { id, name, room };
-        this.userList.push(user);
-        return user;
-    }
-    removeUser(id) {
-        let user = this.getUser(id);
-
-        if (user) {
-            this.userList = this.userList.filter(userInstance => userInstance.id !== id);
-        }
-        return user
-    }
-    getUser(id) {
-        let user = this.userList.filter(user => user.id === id)[0];
-        return user;
-    }
-    getUserList(room) {
-        let roomParticipants = this.userList.filter(user => user.room === room)
-        let participantNames = roomParticipants.map(participant => participant.name)
-        return participantNames;
-    }
-}
 var roomMembers = new User();
 
 io.on("connection", (socket) => { // run block when client connects to server
@@ -94,34 +69,6 @@ io.on("connection", (socket) => { // run block when client connects to server
     });
 });
 
-
-//do string validation
-function isValidString(str) {
-    return typeof str === "string" && str.trim().length > 0
-}
-
-//Handle message data
-function dataHandler(from, text) {
-    var date = new Date();
-    var dateNow = date.getTime();
-    return {
-        from,
-        text,
-        createdAt: moment.valueOf()
-    }
-};
-
-// Handle location message
-function locationHandler(from, latitude, longitude, url) {
-    var date = moment.valueOf();
-    return {
-        from,
-        latitude,
-        longitude,
-        url,
-        createdAt: date
-    }
-}
 server.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
