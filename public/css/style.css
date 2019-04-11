@@ -20,7 +20,7 @@ h3 {
 
 button {
     border: none;
-    background: #265f82;
+    background: #056b07;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -29,14 +29,14 @@ button {
 
 button:hover {
     border: none;
-    background: #1F4C69;
+    background: #003a01;
     color: white;
     padding: 10px;
 }
 
 button:disabled {
     cursor: default;
-    background: #698ea5;
+    background: #88e890;
 }
 
 .centered-form {
@@ -45,17 +45,18 @@ button:disabled {
     height: 100vh;
     width: 100vw;
     justify-content: center;
-    background: -moz-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -moz-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49, 84, 129, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0, 58, 1, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
     /* safari4+,chrome */
-    background: -webkit-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -moz-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
+    background: -webkit-linear-gradient(125deg, 0%, rgba(0, 58, 1, 1) 100%);
     /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -o-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* opera 11.10+ */
-    background: -ms-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -ms-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* ie10+ */
-    background: linear-gradient(325deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: linear-gradient(325deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* w3c */
 }
 
@@ -95,17 +96,18 @@ button:disabled {
     overflow-y: auto;
     width: 260px;
     height: 100vh;
-    background: -moz-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -moz-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49, 84, 129, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0, 58, 1, 1)), color-stop(100%, rgba(39, 107, 130, 1)));
     /* safari4+,chrome */
-    background: -webkit-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -moz-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
+    background: -webkit-linear-gradient(125deg, 0%, rgba(0, 58, 1, 1) 100%);
     /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -o-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* opera 11.10+ */
-    background: -ms-linear-gradient(125deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: -ms-linear-gradient(125deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* ie10+ */
-    background: linear-gradient(325deg, rgba(39, 107, 130, 1) 0%, rgba(49, 84, 129, 1) 100%);
+    background: linear-gradient(325deg, rgba(5, 107, 7, 1) 0%, rgba(0, 58, 1, 1) 100%);
     /* w3c */
 }
 
