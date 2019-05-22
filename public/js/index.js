@@ -9,9 +9,9 @@ socket.on("connect", () => {
         console.log(param)
         if (err) {
             window.location.href = "/";
-            console.log(err)
+            console.log(err);
         } else {
-            console.log("worked")
+            console.log("worked");
         }
     })
 });
@@ -117,25 +117,3 @@ function convertQueryStringToObject() {
 
     return JSON.parse(JSON.stringify(convertedInput));
 };
-
-
-//we'll use this to check if user already exists in group
-// let findDuplicates = (arr) => arr.filter((item, index) => arr.indexOf(item.name) != index)
-// if (findDuplicates(users)) {
-//     console.log("Duplicate user")
-// }
-
-//its variant is shown below but its verbose so we won't use. Plus, one-liners rock!
-// function uniqueUsername(userArray) {
-//     let foundItem = []
-//     userArray.forEach((object) => {
-//         // console.log(object)
-//         // object.name = object.name.toLowerCase()
-//         if (foundItem[object.name]) {
-//             console.log("username exists");
-//             return true
-//         } else {
-//             foundItem[object.name] = true
-//         }
-//     })
-// }
