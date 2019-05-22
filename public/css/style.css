@@ -92,6 +92,14 @@ button:disabled {
     display: flex;
 }
 
+.chat {
+    background: url(../images/chat_background.png)no-repeat center 0px;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
 .chat_leftnav {
     overflow-y: auto;
     width: 260px;
